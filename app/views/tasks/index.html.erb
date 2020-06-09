@@ -1,8 +1,8 @@
 <h1>My tasks</h1>
 <!-- Display the tasks list, @tasks is an array from the controller.-->
-<ul>
+<ul style="list-style: none;" >
   <% @tasks.each do|task| %>
-    <li style="list-style: none">
+    <li >
       <%= task.completed ? "✅" : "❌" %> <%= link_to task.title, task_path(task.id) %>
     </li>
   <% end %>
